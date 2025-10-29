@@ -1,155 +1,74 @@
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aurora — Beautiful Landing</title>
-  <meta name="description" content="A clean, modern landing page built with semantic HTML and pure CSS." />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elegance — Beautiful Colorful Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <a class="brand" href="#">Aurora</a>
-
-      <nav class="nav" aria-label="Main navigation">
-        <ul class="nav-list">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Elegance</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1 class="hero-title">Design that breathes.</h1>
-          <p class="hero-sub">A minimal, responsive landing page template — handcrafted with accessible markup and flexible CSS.</p>
-
-          <div class="hero-cta">
-            <a class="btn primary" href="#features">Explore features</a>
-            <a class="btn ghost" href="#contact">Get in touch</a>
-          </div>
-        </div>
-
-        <div class="hero-card" aria-hidden="true">
-          <div class="mockup">
-            <div class="mockup-header"></div>
-            <div class="mockup-body">
-              <div class="line"></div>
-              <div class="line short"></div>
-              <div class="line"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="features container">
-      <h2 class="section-title">Built for clarity</h2>
-      <p class="section-lead">Everything you need to launch a simple, beautiful site — no frameworks required.</p>
-
-      <div class="grid">
-        <article class="card">
-          <h3>Responsive</h3>
-          <p>Looks great on all screen sizes. Fluid layouts and thoughtful spacing.</p>
-        </article>
-
-        <article class="card">
-          <h3>Accessible</h3>
-          <p>Semantic markup, keyboard-friendly navigation, and high contrast.</p>
-        </article>
-
-        <article class="card">
-          <h3>Performance</h3>
-          <p>Small CSS footprint and no external JS dependencies to keep load times low.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="pricing" class="pricing container">
-      <h2 class="section-title">Simple pricing</h2>
-      <div class="pricing-grid">
-        <div class="plan">
-          <h4>Starter</h4>
-          <p class="price">Free</p>
-          <ul>
-            <li>Single page</li>
-            <li>Basic support</li>
-          </ul>
-          <a class="btn" href="#contact">Choose</a>
-        </div>
-
-        <div class="plan featured">
-          <h4>Pro</h4>
-          <p class="price">$12/mo</p>
-          <ul>
-            <li>Multiple pages</li>
-            <li>Priority support</li>
-            <li>Custom domain</li>
-          </ul>
-          <a class="btn primary" href="#contact">Choose</a>
-        </div>
-
-        <div class="plan">
-          <h4>Agency</h4>
-          <p class="price">$49/mo</p>
-          <ul>
-            <li>Team seats</li>
-            <li>Dedicated support</li>
-            <li>White-label</li>
-          </ul>
-          <a class="btn" href="#contact">Choose</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact container">
-      <h2 class="section-title">Let's build something</h2>
-      <p class="section-lead">Reach out — we usually reply within a day.</p>
-
-      <form class="contact-form" action="#" method="post">
-        <label class="sr-only" for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@domain.com" required>
-        <label class="sr-only" for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project"></textarea>
-        <button class="btn primary" type="submit">Send message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© <span id="year"></span> Aurora — crafted with care.</p>
-      <p class="muted">Made with ❤️ — design system friendly.</p>
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Discover Beauty in Every Pixel</h2>
+      <p>Where creativity meets color and elegance.</p>
+      <a href="#about" class="btn">Explore Now</a>
     </div>
+  </section>
+
+  <section id="about" class="about container">
+    <h2>About Us</h2>
+    <p>We craft visually stunning, user-friendly websites that breathe color and sophistication. Our design philosophy blends beauty with clarity for a seamless digital experience.</p>
+  </section>
+
+  <section id="services" class="services container">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>Elegant, colorful, and responsive layouts tailored for your brand.</p>
+      </div>
+      <div class="card">
+        <h3>Branding</h3>
+        <p>Vibrant identity design that speaks volumes about who you are.</p>
+      </div>
+      <div class="card">
+        <h3>SEO Optimization</h3>
+        <p>Boost your online presence with smart strategies and design synergy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Elegance. Crafted with Love and Color.</p>
   </footer>
 
   <script>
-    // small script for mobile nav toggle and footer year
-    document.addEventListener('DOMContentLoaded', function(){
-      const btn = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.nav');
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('open');
-      });
-
-      document.getElementById('year').textContent = new Date().getFullYear();
-    });
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
