@@ -1,0 +1,264 @@
+# Beautiful Website — index.html + styles.css
+
+Below are the two files you requested. Copy each code block into its own file: `index.html` and `styles.css`.
+
+---
+
+## index.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora — Beautiful Landing</title>
+  <meta name="description" content="A clean, modern landing page built with semantic HTML and pure CSS." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="#">Aurora</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Design that breathes.</h1>
+          <p class="hero-sub">A minimal, responsive landing page template — handcrafted with accessible markup and flexible CSS.</p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#features">Explore features</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+          <div class="mockup">
+            <div class="mockup-header"></div>
+            <div class="mockup-body">
+              <div class="line"></div>
+              <div class="line short"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <h2 class="section-title">Built for clarity</h2>
+      <p class="section-lead">Everything you need to launch a simple, beautiful site — no frameworks required.</p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Responsive</h3>
+          <p>Looks great on all screen sizes. Fluid layouts and thoughtful spacing.</p>
+        </article>
+
+        <article class="card">
+          <h3>Accessible</h3>
+          <p>Semantic markup, keyboard-friendly navigation, and high contrast.</p>
+        </article>
+
+        <article class="card">
+          <h3>Performance</h3>
+          <p>Small CSS footprint and no external JS dependencies to keep load times low.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing container">
+      <h2 class="section-title">Simple pricing</h2>
+      <div class="pricing-grid">
+        <div class="plan">
+          <h4>Starter</h4>
+          <p class="price">Free</p>
+          <ul>
+            <li>Single page</li>
+            <li>Basic support</li>
+          </ul>
+          <a class="btn" href="#contact">Choose</a>
+        </div>
+
+        <div class="plan featured">
+          <h4>Pro</h4>
+          <p class="price">$12/mo</p>
+          <ul>
+            <li>Multiple pages</li>
+            <li>Priority support</li>
+            <li>Custom domain</li>
+          </ul>
+          <a class="btn primary" href="#contact">Choose</a>
+        </div>
+
+        <div class="plan">
+          <h4>Agency</h4>
+          <p class="price">$49/mo</p>
+          <ul>
+            <li>Team seats</li>
+            <li>Dedicated support</li>
+            <li>White-label</li>
+          </ul>
+          <a class="btn" href="#contact">Choose</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2 class="section-title">Let's build something</h2>
+      <p class="section-lead">Reach out — we usually reply within a day.</p>
+
+      <form class="contact-form" action="#" method="post">
+        <label class="sr-only" for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@domain.com" required>
+        <label class="sr-only" for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project"></textarea>
+        <button class="btn primary" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Aurora — crafted with care.</p>
+      <p class="muted">Made with ❤️ — design system friendly.</p>
+    </div>
+  </footer>
+
+  <script>
+    // small script for mobile nav toggle and footer year
+    document.addEventListener('DOMContentLoaded', function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
+```
+
+---
+
+## styles.css
+
+```css
+:root{
+  --bg: #0f1724;
+  --card: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.06);
+  --accent-1: 204 120 255; /* RGB for gradient */
+  --accent-2: 100 210 255;
+  --text: #e6eef8;
+  --muted: rgba(230,238,248,0.7);
+  --radius: 14px;
+  --max-width: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(var(--accent-2),0.08), transparent 8%),
+              radial-gradient(900px 500px at 90% 90%, rgba(var(--accent-1),0.06), transparent 12%),
+              var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.container{width:90%;max-width:var(--max-width);margin:0 auto}
+.header-grid{display:flex;align-items:center;gap:1rem;padding:18px 0}
+.brand{font-family:'Playfair Display', serif;font-size:1.25rem;color:var(--text);text-decoration:none}
+
+.nav{margin-left:auto}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.nav-list a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav-list a:hover{color:var(--text);background:var(--glass)}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:8px 12px;border-radius:10px}
+
+.hero{padding:72px 0}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center}
+.hero-title{font-family:'Playfair Display', serif;font-size: clamp(2rem, 4vw, 3.25rem);margin:0}
+.hero-sub{color:var(--muted);margin-top:12px;max-width:48ch}
+.hero-cta{margin-top:20px;display:flex;gap:12px}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;text-decoration:none;border:1px solid transparent;background:transparent;color:var(--text);cursor:pointer}
+.btn.primary{background:linear-gradient(90deg, rgba(var(--accent-1),0.14), rgba(var(--accent-2),0.12));border:1px solid rgba(var(--accent-1),0.18);backdrop-filter: blur(4px)}
+.btn.ghost{border:1px solid rgba(255,255,255,0.04)}
+
+.hero-card .mockup{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:18px;padding:18px;box-shadow: 0 8px 30px rgba(2,6,23,0.6);width:100%;max-width:420px}
+.mockup-header{height:14px;background:linear-gradient(90deg,rgba(var(--accent-1),0.35),rgba(var(--accent-2),0.35));border-radius:8px;margin-bottom:12px}
+.mockup-body{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:12px;border-radius:10px}
+.line{height:10px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border-radius:6px;margin:10px 0}
+.line.short{width:60%}
+
+.section-title{font-size:1.5rem;margin:0}
+.section-lead{color:var(--muted);margin-top:8px}
+.features{padding:56px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.card{background:var(--card);padding:20px;border-radius:12px}
+
+.pricing{padding:56px 0}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.plan{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;text-align:center}
+.plan.featured{transform:scale(1.03);box-shadow:0 12px 40px rgba(3,6,23,0.6)}
+.price{font-weight:800;font-size:1.25rem;margin:10px 0}
+
+.contact{padding:56px 0}
+.contact-form{display:flex;flex-direction:column;gap:12px;max-width:560px}
+.contact-form input,.contact-form textarea{padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:var(--text)}
+
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:18px 0;margin-top:40px}
+.footer-grid{display:flex;justify-content:space-between;align-items:center}
+.muted{color:var(--muted)}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* Responsive */
+@media (max-width:920px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-card{order:-1}
+}
+@media (max-width:700px){
+  .nav-list{display:none}
+  .nav-toggle{display:inline-block;margin-left:8px}
+  .nav.open .nav-list{display:flex;flex-direction:column;background:var(--card);position:absolute;right:18px;top:64px;padding:12px;border-radius:10px}
+  .grid{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+}
+```
+
+---
+
+### How to use
+
+1. Create a new folder and save the first code block as `index.html` and the second as `styles.css` in the same folder.
+2. Open `index.html` in your browser to view.
+
+If you'd like alternatives (dark/light toggle, additional pages, or a version with inline critical CSS), tell me what you want and I’ll update it.
